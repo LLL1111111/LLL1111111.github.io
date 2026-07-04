@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>~/devlog — a blog by Your Name</title>
+<meta name="description" content="Notes on building software, systems, and side projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="prompt">~/</span>devlog<span class="cursor"></span></a>
+    <nav class="nav">
+      <a href="index.html" class="active">home</a>
+      <a href="blog.html">blog</a>
+      <a href="about.html">about</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">devlog</p>
+      <h1>I build things and write<br>about how they broke.</h1>
+      <p class="lead">Hi, I'm Your Name — a software engineer figuring things out in public. This is where I keep notes on the systems I build, the bugs that humbled me, and the occasional idea that actually worked.</p>
+      <p class="term"><span class="ok">➜</span> whoami &nbsp;—&nbsp; engineer · tinkerer · perpetual rewriter of README files</p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="blog.html">Read the blog</a>
+        <a class="btn" href="about.html">About me</a>
+      </div>
+    </section>
+
+    <h2>Latest posts</h2>
+    <ul class="post-list">
+      <li>
+        <a href="posts/debugging-the-heisenbug.html">
+          <span class="post-date">2026-06-28</span>
+          <span>
+            <span class="p-title">Chasing a Heisenbug through three time zones</span>
+            <span class="p-desc">A race condition that only appeared in production, only on Tuesdays, and only when I wasn't looking.</span>
+            <span class="tags"><span class="tag">debugging</span><span class="tag">concurrency</span></span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="blog.html">
+          <span class="post-date">2026-06-10</span>
+          <span>
+            <span class="p-title">Why I stopped over-engineering my side projects</span>
+            <span class="p-desc">Three microservices and a message queue for a to-do app I never launched. A cautionary tale.</span>
+            <span class="tags"><span class="tag">architecture</span><span class="tag">opinion</span></span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="blog.html">
+          <span class="post-date">2026-05-22</span>
+          <span>
+            <span class="p-title">The commit message that saved my weekend</span>
+            <span class="p-desc">On writing git history for the person you'll be at 2am six months from now.</span>
+            <span class="tags"><span class="tag">git</span><span class="tag">habits</span></span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Your Name — built with plain HTML, no build step.</span>
+    <span><a href="https://github.com/yourusername">github</a> · <a href="#">rss</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
