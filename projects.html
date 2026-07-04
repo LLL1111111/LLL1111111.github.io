@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Contrarian Perspective in AI</title>
+<meta name="description" content="Structured research assets across AI infrastructure, agent systems, world models, and public-market research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Contrarian<span class="accent-dot">.</span>Perspective in AI</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="essays.html">Essays</a>
+      <a href="notes.html">Notes</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h1>Research assets</h1>
+    <p class="lead">Structured investigations, not a generic work-experience list. Each project tracks a problem, a method, and an output — linked back to the relevant essays and notes.</p>
+
+    <div class="project-card" id="vggt-workload-analysis">
+      <div class="project-head">
+        <h3>VGGT Workload Analysis</h3>
+        <span class="status-badge draft">draft</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>What VGGT-style multimodal/3D reconstruction models actually spend compute and memory on.</dd>
+        <dt>Method</dt><dd>Workload characterisation across model stages, compared against reported architecture choices.</dd>
+        <dt>Output</dt><dd>A workload breakdown feeding into the Multimodal and World Models research track.</dd>
+      </dl>
+      <div class="project-links">
+        <a class="tag" href="research.html#multimodal-and-world-models">Research track</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="ai-infrastructure-taxonomy">
+      <div class="project-head">
+        <h3>AI Infrastructure Taxonomy</h3>
+        <span class="status-badge draft">draft</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>There is no consistent taxonomy for classifying AI infrastructure bottlenecks — compute, memory, networking, storage, and power.</dd>
+        <dt>Method</dt><dd>Build a structured taxonomy grounded in real inference and training workload behaviour.</dd>
+        <dt>Output</dt><dd>A reference taxonomy used across the AI Infrastructure and Public Market research tracks.</dd>
+      </dl>
+      <div class="project-links">
+        <a class="tag" href="research.html#ai-infrastructure-and-inference">Research track</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="agent-context-engineering-notes">
+      <div class="project-head">
+        <h3>Agent Context Engineering Notes</h3>
+        <span class="status-badge active">active</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>How context is built, edited, and retained across long-horizon agent tasks.</dd>
+        <dt>Method</dt><dd>Ongoing survey of context editing, agent design, inference methods, model architecture, and compute infrastructure across the industry.</dd>
+        <dt>Output</dt><dd>The <a href="posts/context-engineering-full-stack.html">Context Engineering</a> essay, with further notes to follow.</dd>
+      </dl>
+      <div class="project-links">
+        <a class="tag" href="posts/context-engineering-full-stack.html">Essay</a>
+        <a class="tag" href="research.html#agent-systems-and-context-engineering">Research track</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="world-model-and-3d-reconstruction-notes">
+      <div class="project-head">
+        <h3>World Model and 3D Reconstruction Notes</h3>
+        <span class="status-badge draft">draft</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>How world-model and 3D-reconstruction research connects to grounding for language and action agents.</dd>
+        <dt>Method</dt><dd>Reading notes and architecture comparisons across recent world-model papers and releases.</dd>
+        <dt>Output</dt><dd>A running set of notes feeding the Multimodal and World Models research track.</dd>
+      </dl>
+      <div class="project-links">
+        <a class="tag" href="research.html#multimodal-and-world-models">Research track</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="olfactory-ai-research">
+      <div class="project-head">
+        <h3>Olfactory AI Research</h3>
+        <span class="status-badge paused">paused</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>Whether machine-learning approaches to smell (olfactory encoding and prediction) generalise the way vision and language models have.</dd>
+        <dt>Method</dt><dd>Literature review of olfactory representation-learning approaches and their data constraints.</dd>
+        <dt>Output</dt><dd>A short assessment of whether this is a near-term or far-term research bet.</dd>
+      </dl>
+    </div>
+
+    <div class="project-card" id="public-market-ai-research-framework">
+      <div class="project-head">
+        <h3>Public Market AI Research Framework</h3>
+        <span class="status-badge draft">draft</span>
+      </div>
+      <dl>
+        <dt>Problem</dt><dd>Public-market valuations for AI infrastructure names often don't map cleanly onto the technical bottlenecks driving them.</dd>
+        <dt>Method</dt><dd>A framework connecting infrastructure bottleneck analysis (compute, power, networking, software) to public-market valuation discipline.</dd>
+        <dt>Output</dt><dd>A reusable framework for the Public Market AI Research track.</dd>
+      </dl>
+      <div class="project-links">
+        <a class="tag" href="research.html#public-market-ai-research">Research track</a>
+      </div>
+    </div>
+
+    <p class="disclosure">Nothing on this site is investment advice. I write from public information only.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>&copy; 2026 Contrarian Perspective in AI.</span>
+    <span><a href="https://github.com/LLL1111111">github</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
