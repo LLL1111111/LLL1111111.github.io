@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog - Contrarian Perspective in AI</title>
+<meta name="description" content="Blog posts and long-form research notes on AI infrastructure, agent systems, and public-market implications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Contrarian<span class="accent-dot">.</span>Perspective in AI</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="future.html">Future</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="notes.html">Notes</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Blog</p>
+    <h1>Writing across time</h1>
+    <p class="lead">Long-form posts, research memos, and public notes organised by year and theme. Use the filters or drag the timeline when the archive grows across more years.</p>
+
+    <section class="filter-panel" aria-label="Blog filters">
+      <div class="filter-group">
+        <label for="year-filter">Year</label>
+        <select id="year-filter" class="filter-select">
+          <option value="all">All years</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="topic-filter">Topic</label>
+        <select id="topic-filter" class="filter-select">
+          <option value="all">All topics</option>
+          <option value="agents">Agents</option>
+          <option value="context-engineering">Context engineering</option>
+          <option value="ai-infrastructure">AI infrastructure</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="timeline-shell" aria-label="Blog timeline">
+      <div class="timeline-hint">Drag horizontally</div>
+      <div class="timeline-track" id="blog-timeline">
+        <a class="timeline-card" href="posts/context-engineering-full-stack.html" data-year="2025" data-topic="agents context-engineering ai-infrastructure">
+          <span class="timeline-date">Oct 2025</span>
+          <span class="timeline-title">Context Engineering: An Industry-Wide Technical Landscape</span>
+          <span class="timeline-tags">agents / context-engineering / ai-infrastructure</span>
+        </a>
+      </div>
+    </section>
+
+    <ul class="post-list filterable-posts" id="blog-list">
+      <li data-year="2025" data-topic="agents context-engineering ai-infrastructure">
+        <a href="posts/context-engineering-full-stack.html">
+          <span class="post-date">Oct 2025</span>
+          <span>
+            <span class="p-title">Context Engineering: An Industry-Wide Technical Landscape</span>
+            <span class="p-desc">A full-stack survey of context engineering from fundamentals to context editing, agent design, inference methods, model architecture, and compute infrastructure.</span>
+            <span class="tags"><span class="type-badge pdf">pdf</span><span class="tag">agents</span><span class="tag">context-engineering</span><span class="tag">ai-infrastructure</span></span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="empty-state hidden" id="blog-empty">No posts match the selected filters yet.</div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>&copy; 2026 Contrarian Perspective in AI.</span>
+    <span><a href="https://github.com/LLL1111111">github</a></span>
+  </div>
+</footer>
+
+<script>
+const yearFilter = document.getElementById("year-filter");
+const topicFilter = document.getElementById("topic-filter");
+const posts = Array.from(document.querySelectorAll("#blog-list li"));
+const cards = Array.from(document.querySelectorAll(".timeline-card"));
+const empty = document.getElementById("blog-empty");
+const timeline = document.getElementById("blog-timeline");
+
+function matchesFilters(item) {
+  const year = yearFilter.value;
+  const topic = topicFilter.value;
+  const itemTopics = item.dataset.topic.split(" ");
+  return (year === "all" || item.dataset.year === year) &&
+    (topic === "all" || itemTopics.includes(topic));
+}
+
+function applyFilters() {
+  let visibleCount = 0;
+  posts.forEach((post) => {
+    const visible = matchesFilters(post);
+    post.classList.toggle("hidden", !visible);
+    if (visible) visibleCount += 1;
+  });
+  cards.forEach((card) => card.classList.toggle("hidden", !matchesFilters(card)));
+  empty.classList.toggle("hidden", visibleCount !== 0);
+}
+
+yearFilter.addEventListener("change", applyFilters);
+topicFilter.addEventListener("change", applyFilters);
+
+let isDragging = false;
+let startX = 0;
+let scrollStart = 0;
+
+timeline.addEventListener("pointerdown", (event) => {
+  isDragging = true;
+  timeline.setPointerCapture(event.pointerId);
+  startX = event.clientX;
+  scrollStart = timeline.scrollLeft;
+  timeline.classList.add("is-dragging");
+});
+
+timeline.addEventListener("pointermove", (event) => {
+  if (!isDragging) return;
+  timeline.scrollLeft = scrollStart - (event.clientX - startX);
+});
+
+timeline.addEventListener("pointerup", () => {
+  isDragging = false;
+  timeline.classList.remove("is-dragging");
+});
+
+timeline.addEventListener("pointercancel", () => {
+  isDragging = false;
+  timeline.classList.remove("is-dragging");
+});
+</script>
+
+</body>
+</html>
