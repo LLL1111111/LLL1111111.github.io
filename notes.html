@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Notes - Contrarian Perspective in AI</title>
-<meta name="description" content="Short notes and public fragments, currently mirrored from the X account @donaldlai3000.">
+<meta name="description" content="Short notes and public fragments pulled from the public X account @donaldlai3000.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,12 +30,31 @@
   <div class="wrap">
     <p class="eyebrow">Notes</p>
     <h1>Short public fragments</h1>
-    <p class="lead">This page currently pulls in the public X feed from <a href="https://x.com/donaldlai3000" target="_blank" rel="noopener">@donaldlai3000</a>. Longer, more structured pieces live in the <a href="blog.html">blog</a>.</p>
+    <p class="lead">This page pulls the public X feed from <a href="https://x.com/donaldlai3000" target="_blank" rel="noopener">@donaldlai3000</a> directly into the page. Longer, more structured pieces live in the <a href="blog.html">blog</a>.</p>
 
     <section class="x-feed-shell" aria-label="X feed from donaldlai3000">
-      <a class="twitter-timeline" data-height="720" data-chrome="noheader nofooter" href="https://twitter.com/donaldlai3000?ref_src=twsrc%5Etfw">Posts by @donaldlai3000</a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <p class="x-feed-fallback">If the feed does not load, open <a href="https://x.com/donaldlai3000" target="_blank" rel="noopener">@donaldlai3000 on X</a>.</p>
+      <div class="x-feed-header">
+        <div>
+          <p class="eyebrow">Live X feed</p>
+          <h2>@donaldlai3000</h2>
+        </div>
+        <span class="status-badge active">live</span>
+      </div>
+
+      <div id="x-feed" class="x-feed-embed" data-x-handle="donaldlai3000">
+        <div class="x-loading-card">
+          <span class="x-loading-line short"></span>
+          <span class="x-loading-line"></span>
+          <span class="x-loading-line mid"></span>
+        </div>
+        <div class="x-loading-card">
+          <span class="x-loading-line short"></span>
+          <span class="x-loading-line"></span>
+          <span class="x-loading-line mid"></span>
+        </div>
+      </div>
+
+      <p class="x-feed-fallback" id="x-feed-fallback" hidden>X did not return the embedded feed in this browser. Open <a href="https://x.com/donaldlai3000" target="_blank" rel="noopener">@donaldlai3000 on X</a>.</p>
     </section>
   </div>
 </main>
@@ -46,6 +65,63 @@
     <span><a href="https://github.com/LLL1111111">github</a></span>
   </div>
 </footer>
+
+<script>
+const feedContainer = document.getElementById("x-feed");
+const fallback = document.getElementById("x-feed-fallback");
+
+function showFeedFallback() {
+  if (!feedContainer.querySelector("iframe")) fallback.hidden = false;
+}
+
+function renderXTimeline() {
+  if (!window.twttr || !window.twttr.widgets || !window.twttr.widgets.createTimeline) {
+    showFeedFallback();
+    return;
+  }
+
+  const handle = feedContainer.dataset.xHandle;
+  feedContainer.replaceChildren();
+  window.twttr.widgets.createTimeline(
+    { sourceType: "profile", screenName: handle },
+    feedContainer,
+    {
+      height: 760,
+      chrome: "noheader nofooter transparent",
+      dnt: true,
+      theme: "light"
+    }
+  ).then(() => {
+    fallback.hidden = Boolean(feedContainer.querySelector("iframe"));
+  }).catch(showFeedFallback);
+}
+
+function loadXWidgets() {
+  if (window.twttr && window.twttr.ready) {
+    window.twttr.ready(renderXTimeline);
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = "https://platform.twitter.com/widgets.js";
+  script.async = true;
+  script.charset = "utf-8";
+  script.onload = () => {
+    if (window.twttr && window.twttr.ready) {
+      window.twttr.ready(renderXTimeline);
+    } else {
+      renderXTimeline();
+    }
+  };
+  script.onerror = showFeedFallback;
+  document.head.appendChild(script);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadXWidgets();
+  setTimeout(showFeedFallback, 8000);
+});
+</script>
 
 </body>
 </html>

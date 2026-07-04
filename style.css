@@ -478,3 +478,47 @@ main p { max-width: 68ch; }
   .about-block { grid-template-columns: 1fr; gap: 10px; }
   .link-grid, .map-overview, .signal-grid { grid-template-columns: 1fr; }
 }
+
+/* X notes embed */
+.x-feed-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.x-feed-header .eyebrow { margin: 0 0 6px; }
+.x-feed-header h2 { margin: 0; font-size: 1.25rem; }
+.x-feed-embed {
+  min-height: 520px;
+  display: grid;
+  gap: 12px;
+}
+.x-feed-embed iframe {
+  width: 100% !important;
+  min-height: 720px !important;
+}
+.x-loading-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-inset);
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+.x-loading-line {
+  display: block;
+  height: 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #e8ebf0 0%, #f6f7f9 50%, #e8ebf0 100%);
+  background-size: 220% 100%;
+  animation: x-loading 1.4s ease-in-out infinite;
+}
+.x-loading-line.short { width: 34%; }
+.x-loading-line.mid { width: 68%; }
+@keyframes x-loading {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
