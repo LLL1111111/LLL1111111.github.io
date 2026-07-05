@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Future - Contrarian Perspective in AI</title>
-<meta name="description" content="A forward-looking map of technology trends, AI infrastructure, agents, multimodal systems, products, and public markets.">
+<meta name="description" content="A roadmap of AI agents, context engineering, infrastructure, world models, products, and market structure based on the research archive.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,20 +30,91 @@
   <div class="wrap">
     <p class="eyebrow">Future map</p>
     <h1>Tracking where the next constraints and opportunities move.</h1>
-    <p class="lead">This page replaces the old research page with a forward-looking map. The goal is not just to list projects, but to keep a living view of trends, signals, open questions, and how different directions connect.</p>
+    <p class="lead">This page turns the raw research archive into a forward-looking map: what has been tracked, how the themes evolve, and which material should become future blog posts.</p>
 
     <section class="map-overview">
       <div class="map-node">
-        <span class="map-label">Core lens</span>
-        <strong>AI systems moving from capability demos to durable infrastructure</strong>
+        <span class="map-label">Archive base</span>
+        <strong>82 publishable source files across infrastructure, agents, world models, products, and company signals</strong>
       </div>
       <div class="map-node">
-        <span class="map-label">What changes</span>
-        <strong>Compute, data, memory, energy, agents, interfaces, and market structure</strong>
+        <span class="map-label">Core movement</span>
+        <strong>AI shifts from model capability to agentic workloads running on specialised compute systems</strong>
       </div>
       <div class="map-node">
         <span class="map-label">Output</span>
-        <strong>Trend maps, public notes, blog posts, and project-level analysis</strong>
+        <strong>A living roadmap for future essays, source decks, public notes, and trend maps</strong>
+      </div>
+    </section>
+
+    <section class="future-roadmap" aria-label="Future roadmap">
+      <p class="eyebrow">Roadmap from the archive</p>
+      <h2>路线和演进</h2>
+      <p class="section-intro">The archive clusters around two dominant themes: agents/context engineering and AI infrastructure/compute. The long-term map is how these two lines merge.</p>
+
+      <div class="evolution-list">
+        <article class="evolution-item">
+          <span class="evolution-year">2022-2023</span>
+          <div>
+            <h3>Compute networking becomes the base layer</h3>
+            <p>Cluster interconnect, multirail networking, Hot Interconnect notes, early scaling-law views, and GPU/CPU/network debates form the infrastructure baseline.</p>
+            <div class="tags"><span class="tag">cluster-interconnect</span><span class="tag">networking</span><span class="tag">scaling-law</span></div>
+          </div>
+        </article>
+
+        <article class="evolution-item">
+          <span class="evolution-year">2024</span>
+          <div>
+            <h3>Inference, reliability, and world models move forward</h3>
+            <p>The focus expands from raw training systems to inference scaling laws, high-availability clusters, async training across data centres, world models, multimodal UI, and product-facing workloads.</p>
+            <div class="tags"><span class="tag">inference</span><span class="tag">reliability</span><span class="tag">world-models</span></div>
+          </div>
+        </article>
+
+        <article class="evolution-item">
+          <span class="evolution-year">2025</span>
+          <div>
+            <h3>Agents become the organising workload</h3>
+            <p>AI Engineer Summit notes, context engineering, agent trajectory data, async compute, AI scientist materials, and company signals point to agents as both product form and infrastructure workload.</p>
+            <div class="tags"><span class="tag">agents</span><span class="tag">context-engineering</span><span class="tag">trajectory-data</span></div>
+          </div>
+        </article>
+
+        <article class="evolution-item">
+          <span class="evolution-year">2026+</span>
+          <div>
+            <h3>Agentic systems reshape compute, interfaces, and data</h3>
+            <p>The forward track is agentic context, low-latency interaction, consumer AI hardware, hard-to-verify RL data, and workload-specific compute systems.</p>
+            <div class="tags"><span class="tag">agentic-context</span><span class="tag">low-latency</span><span class="tag">ai-hardware</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="future-clusters" aria-label="Research clusters">
+      <p class="eyebrow">Source clusters</p>
+      <h2>How the material is classified</h2>
+      <div class="cluster-grid">
+        <div class="cluster-card">
+          <span class="cluster-count">43</span>
+          <h3>Agents and Context Engineering</h3>
+          <p>Agent progress, context engineering, trajectory data, AI Engineer Summit, reasoning models, async compute, and stateful agentic systems.</p>
+        </div>
+        <div class="cluster-card">
+          <span class="cluster-count">33</span>
+          <h3>AI Infrastructure and Compute</h3>
+          <p>Cluster interconnect, inference, GPU/CPU coupling, TPU and GPU systems, high availability, async training, memory, networking, and power constraints.</p>
+        </div>
+        <div class="cluster-card">
+          <span class="cluster-count">3</span>
+          <h3>World Models and Multimodal</h3>
+          <p>World-model interaction, multimodal UI, embodied intelligence, video-native models, and spatial grounding for agent systems.</p>
+        </div>
+        <div class="cluster-card">
+          <span class="cluster-count">2</span>
+          <h3>Company and Market Watch</h3>
+          <p>OpenAI, Google, Meta, AMD, Oriole, Sequoia, European compute projects, and the market structure around AI infrastructure.</p>
+        </div>
       </div>
     </section>
 
@@ -52,8 +123,8 @@
       <h2>AI Infrastructure and Inference</h2>
       <p>Inference cost, memory bandwidth, networking, storage, and power are becoming the practical boundary of what products can ship.</p>
       <div class="signal-grid">
-        <div><h4>Signals</h4><ul><li>Longer context windows</li><li>Higher serving volume</li><li>Power and data-centre constraints</li></ul></div>
-        <div><h4>Tracking</h4><ul><li>Where inference cost actually goes</li><li>How memory capacity shapes architecture</li><li>Which bottleneck moves next</li></ul></div>
+        <div><h4>Signals</h4><ul><li>Cluster interconnect becomes product-critical</li><li>Inference and long-context workloads change memory pressure</li><li>High availability matters as training spans more clusters and data centres</li></ul></div>
+        <div><h4>Tracking</h4><ul><li>Where inference cost actually goes</li><li>How GPU/CPU/network coupling changes system design</li><li>Which bottleneck moves next: memory, network, power, or reliability</li></ul></div>
       </div>
     </section>
 
@@ -62,8 +133,8 @@
       <h2>Agent Systems and Context Engineering</h2>
       <p>As agents take on longer tasks, context construction, editing, persistence, and evaluation become a core software layer.</p>
       <div class="signal-grid">
-        <div><h4>Signals</h4><ul><li>Persistent agent memory</li><li>Context editing and compression</li><li>Workflow automation moving into production</li></ul></div>
-        <div><h4>Tracking</h4><ul><li>Agent architectures that survive long-horizon work</li><li>Evaluation loops for memory-rich agents</li><li>How context engineering becomes infrastructure</li></ul></div>
+        <div><h4>Signals</h4><ul><li>Agent trajectory data becomes a training asset</li><li>Context engineering turns into an industry-wide stack</li><li>Agentic workloads need async execution and tool-rich environments</li></ul></div>
+        <div><h4>Tracking</h4><ul><li>Agent architectures that survive long-horizon work</li><li>Evaluation loops for memory-rich agents</li><li>How agent workloads reshape compute scheduling</li></ul></div>
       </div>
       <p class="section-intro">Related post: <a href="posts/context-engineering-full-stack.html">Context Engineering: An Industry-Wide Technical Landscape</a>.</p>
     </section>
@@ -73,7 +144,7 @@
       <h2>Multimodal and World Models</h2>
       <p>Video, 3D reconstruction, world models, and language agents are converging into broader systems for perception, planning, and action.</p>
       <div class="signal-grid">
-        <div><h4>Signals</h4><ul><li>3D reconstruction models</li><li>Video-native AI systems</li><li>Embodied and spatial reasoning</li></ul></div>
+        <div><h4>Signals</h4><ul><li>World models become interaction environments</li><li>Multimodal UI moves AI closer to everyday products</li><li>Embodied intelligence raises the bar for grounding</li></ul></div>
         <div><h4>Tracking</h4><ul><li>Whether progress is compute-bound or data-bound</li><li>How grounding changes agent design</li><li>Workload patterns in multimodal models</li></ul></div>
       </div>
     </section>
@@ -83,7 +154,7 @@
       <h2>AI Product Strategy</h2>
       <p>Technical constraints in infrastructure and agents eventually become product roadmaps, pricing, distribution, and defensibility.</p>
       <div class="signal-grid">
-        <div><h4>Signals</h4><ul><li>AI workflows becoming default software behavior</li><li>Wrapper products getting squeezed</li><li>Infrastructure cost affecting margins</li></ul></div>
+        <div><h4>Signals</h4><ul><li>AI workflows become default software behavior</li><li>Agent products need state, tools, and persistent context</li><li>Consumer AI hardware tests whether interaction can become ambient</li></ul></div>
         <div><h4>Tracking</h4><ul><li>Where durable product advantages come from</li><li>How cost changes product design</li><li>What the next interface layer looks like</li></ul></div>
       </div>
     </section>
@@ -93,8 +164,22 @@
       <h2>Public Market AI Research</h2>
       <p>AI infrastructure economics are now a public-market story: semiconductors, power, networking, software platforms, and capex cycles.</p>
       <div class="signal-grid">
-        <div><h4>Signals</h4><ul><li>AI capex concentration</li><li>Power and grid constraints</li><li>Software valuation pressure</li></ul></div>
+        <div><h4>Signals</h4><ul><li>AI capex concentration</li><li>Power, networking, and reliability constraints</li><li>Photonic networking and European compute projects become watch items</li></ul></div>
         <div><h4>Tracking</h4><ul><li>Where consensus misprices bottlenecks</li><li>How technical limits affect valuation</li><li>Which second-order beneficiaries matter</li></ul></div>
+      </div>
+    </section>
+
+    <section class="source-queue" aria-label="Future blog source queue">
+      <p class="eyebrow">Future blog queue</p>
+      <h2>Next materials to convert</h2>
+      <p class="section-intro">These are not live posts yet. They are the highest-signal source materials to turn into future Blog entries.</p>
+      <div class="queue-list">
+        <div class="queue-item"><span>Agents</span><strong>agentic模型趋势及算力系统启示</strong><p>Agentic model trends, workload shape, RL, context, and compute-system implications.</p></div>
+        <div class="queue-item"><span>Context</span><strong>context engineering / context engineering技术全栈</strong><p>Core stack map for context construction, editing, persistence, and agent memory.</p></div>
+        <div class="queue-item"><span>Infra</span><strong>agent负载特征和合适的算力系统</strong><p>Agent workload features and the compute system that fits them.</p></div>
+        <div class="queue-item"><span>Infra</span><strong>大模型异步计算全面洞察-by 2025MAY</strong><p>Async execution, distributed training, and scheduler implications for large-model systems.</p></div>
+        <div class="queue-item"><span>Market</span><strong>AMD与英国Oriole合作商业部署</strong><p>Photonic networking as a possible new path for large-scale AI systems.</p></div>
+        <div class="queue-item"><span>2026</span><strong>低时延交互2026 / AI消费者硬件-2026jan</strong><p>Low-latency interaction and consumer hardware as the front end of agentic AI.</p></div>
       </div>
     </section>
 
