@@ -1,0 +1,72 @@
+media:
+  input: uploads
+  output: /uploads
+content:
+  - name: insights
+    label: Insights and materials
+    type: collection
+    path: content/insights
+    format: json
+    filename: '{fields.slug}.json'
+    fields:
+      - {name: title, label: Title, type: string, required: true}
+      - name: slug
+        label: Permanent URL name
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+      - {name: published, label: Publish, type: boolean, default: false}
+      - {name: date, label: Original date (YYYY-MM-DD or YYYY-MM), type: string, required: true}
+      - {name: publishedAt, label: Website publication date, type: string}
+      - name: topic
+        type: select
+        options:
+          values: [Agents and context engineering, AI infrastructure and compute, Multimodal and world models, Company and market watch, Unsorted]
+      - name: type
+        label: Format
+        type: select
+        options:
+          values: [Article, Presentation, Report, Note]
+      - {name: summary, label: Short summary, type: text, required: true}
+      - {name: body, label: Main content, type: rich-text}
+      - {name: attachment, label: PDF or original file, type: file}
+      - {name: cover, label: Cover image, type: image}
+      - {name: featured, label: Featured research, type: boolean}
+      - {name: sourceName, label: Original source filename, type: string}
+  - name: tracks
+    label: Future Map
+    type: file
+    path: content/tracks.json
+    format: json
+    list: true
+    fields:
+      - {name: id, type: string, required: true}
+      - {name: title, type: string, required: true}
+      - {name: topic, type: string, required: true}
+      - {name: question, type: text}
+      - {name: position, label: Current research focus, type: text}
+      - {name: uncertainty, label: Open question, type: text}
+      - {name: signals, label: Signals to follow, type: text}
+      - name: history
+        type: object
+        list: true
+        fields:
+          - {name: date, type: string}
+          - {name: text, type: text}
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - {name: id, type: string, required: true}
+      - {name: title, type: string, required: true}
+      - name: status
+        type: select
+        options:
+          values: [Active, Draft, Paused, Complete]
+      - {name: problem, type: text}
+      - {name: method, type: text}
+      - {name: output, type: text}
+      - {name: link, type: string}

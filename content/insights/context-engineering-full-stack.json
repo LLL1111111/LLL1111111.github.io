@@ -1,0 +1,14 @@
+{
+  "slug": "context-engineering-full-stack",
+  "title": "Context Engineering: An Industry-Wide Technical Landscape",
+  "published": true,
+  "date": "2025-10",
+  "publishedAt": "2026-07-04",
+  "topic": "Agents and context engineering",
+  "type": "Presentation",
+  "summary": "A full-stack survey connecting context editing and agent design to inference, model architecture, and compute infrastructure.",
+  "featured": true,
+  "cover": "/assets/context-preview.jpg",
+  "attachment": "/posts/pdfs/context-engineering-full-stack.pdf",
+  "body": "## Research scope\n\nThis research deck surveys how the AI industry approaches context engineering, from the fundamentals to the infrastructure underneath it.\n\n## Inside the deck\n\n1. Definitions, importance, and challenges of context engineering\n2. Industry practice\n3. Context editing and agent design\n4. Inference methods and model architecture\n5. Compute infrastructure and future directions\n\n## Reading context\n\nThe original Chinese slide deck was written in October 2025. This introduction summarises its structure; the original document below contains the full research. Historical material reflects its original date."
+}

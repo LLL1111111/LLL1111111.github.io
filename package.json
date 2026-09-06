@@ -1,0 +1,1 @@
+{"name":"donald-lai-research","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","check":"node scripts/check.mjs"},"dependencies":{"marked":"^16.0.0"},"devDependencies":{"@playwright/test":"^1.63.0","cheerio":"^1.2.0"}}
