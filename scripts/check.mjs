@@ -9,7 +9,8 @@ for(const file of files){
  for(const el of $('a[href],img[src],iframe[src],script[src],link[href]').toArray()){
   const url=$(el).attr('href')||$(el).attr('src');
   if(!url||/^(https?:|mailto:|data:)/.test(url))continue;
-  const [pathname,hash]=url.split('#');
+  const [encodedPath,hash]=url.split('#');
+  const pathname=decodeURIComponent(encodedPath);
   const target=pathname.startsWith('/')?path.join('dist',pathname):path.join('dist',path.dirname(file),pathname.split('?')[0]||path.basename(file));
   if(!fs.existsSync(target))throw new Error(`${file}: missing ${url}`);
   if(hash&&target.endsWith('.html')){const dest=load(fs.readFileSync(target,'utf8'));if(!dest('[id]').toArray().some(e=>dest(e).attr('id')===hash))throw new Error(`${file}: missing anchor ${url}`)}

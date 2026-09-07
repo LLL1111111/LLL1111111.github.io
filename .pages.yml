@@ -30,6 +30,13 @@ content:
       - {name: summary, label: Short summary, type: text, required: true}
       - {name: body, label: Main content, type: rich-text}
       - {name: attachment, label: PDF or original file, type: file}
+      - name: attachments
+        label: Language editions and additional files
+        type: object
+        list: true
+        fields:
+          - {name: label, label: Edition label, type: string, required: true}
+          - {name: file, label: PDF or original file, type: file, required: true}
       - {name: cover, label: Cover image, type: image}
       - {name: featured, label: Featured research, type: boolean}
       - {name: sourceName, label: Original source filename, type: string}

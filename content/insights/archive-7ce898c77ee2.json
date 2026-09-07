@@ -1,12 +1,23 @@
 {
-  "slug": "archive-7ce898c77ee2",
-  "title": "agentic模型趋势及算力系统启示",
-  "published": false,
-  "date": "",
+  "slug": "agentic-model-trends-and-compute-systems",
+  "title": "Agentic Model Trends and Implications for Compute Systems",
+  "published": true,
+  "date": "2025-07",
   "topic": "Agents and context engineering",
   "type": "Presentation",
-  "summary": "",
-  "body": "",
+  "summary": "Agentic model trends, long-running tasks and agent scaling, with implications for asynchronous reinforcement learning, resource scheduling and AI infrastructure.",
+  "body": "## Research scope\n\nThis July 2025 research deck examines agentic model capabilities, stateful and long-running tasks, agent scaling and evaluation, and the implications for training and inference infrastructure.\n\n## English and Chinese editions\n\nRead either version below. The English edition contains 54 pages; the Chinese edition contains 53 pages.\n\n- [English PDF](../posts/pdfs/agentic模型趋势及算力系统启示-gpt-eng.pdf)\n- [中文 PDF — Agentic模型趋势及算力系统启示](../posts/pdfs/agentic模型趋势及算力系统启示.pdf)",
   "sourceName": "New folder\\agentic模型趋势及算力系统启示.pptx",
-  "featured": false
+  "featured": false,
+  "publishedAt": "2026-09-07",
+  "attachments": [
+    {
+      "label": "English edition",
+      "file": "/posts/pdfs/agentic模型趋势及算力系统启示-gpt-eng.pdf"
+    },
+    {
+      "label": "中文版",
+      "file": "/posts/pdfs/agentic模型趋势及算力系统启示.pdf"
+    }
+  ]
 }
