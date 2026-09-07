@@ -1,12 +1,14 @@
 {
-  "slug": "archive-38daab79a204",
-  "title": "AI加速AI开发",
-  "published": false,
-  "date": "",
-  "topic": "Agents and context engineering",
+  "slug": "use-ai-to-build-ai-infra-to-accelerate-ai",
+  "title": "Use AI to Build AI Infra to Accelerate AI",
+  "published": true,
+  "date": "2025-03",
+  "topic": "AI infrastructure and compute",
   "type": "Presentation",
-  "summary": "",
-  "body": "",
+  "summary": "Using AI to build AI infrastructure and accelerate AI development.",
+  "body": "Research presentation from March 2025. Read the full deck below or download the PDF.",
   "sourceName": "New folder\\AI加速AI开发.pptx",
-  "featured": false
+  "featured": false,
+  "publishedAt": "2026-09-07",
+  "attachment": "/posts/pdfs/use-ai-to-build-ai-infra-to-accelerate-ai.pdf"
 }
